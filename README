@@ -1,0 +1,19 @@
+Authors:
+	Ryan Schmukler - schmukle
+	Nate Sullivan - sullivan
+
+Mysh:
+	Implemented a simple shell. Used strtok to tokenize the string and then parse. Additionally string parsing took care of recognizing redirecting
+	Reserved commands were handled with a simple if statement which then executed the propper function.
+	Standard system commands were handled by a forked process and execve.
+	Redirection was handled by closing stdout and opening a new file to the file specified.
+
+
+Scheduler:
+	Implemented two new syscalls in a similar fashion as the getcount method from p1
+	Used argint to fetch the integer argument off the stack for the sys_settickets
+	Added new variables to the proc structure to handle the tickets, the pass, and the usageCount for a given process
+	Added appropriate code to allocproc to initialize the above
+	Implemented a stride scheduler in place of the existing one in the kernel
+	
+
